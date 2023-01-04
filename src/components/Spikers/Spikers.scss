@@ -1,0 +1,21 @@
+.speakers-holder {
+  display: flex;
+  gap: 10px;
+  img {
+    width: 120px;
+    height: 120px;
+  }
+  div {
+    padding: 15px;
+    h4 {
+      margin-bottom: 2px;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+    p {
+      opacity: 0.7;
+      font-size: 16px;
+      line-height: 1.375;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.sponsors {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  h3 {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.53;
+    letter-spacing: 3px;
+    margin: 4rem 0;
+  }
+  .sponsors-holder {
+    display: flex;
+    text-align: center;
+
+    flex-wrap: wrap;
+    a {
+      border: 1px solid #eaeaea;
+
+      transition: border-color 0.2s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem;
+      flex: 0 0 33.33%;
+
+      &:hover {
+        border-color: #111111;
+      }
+      .logo {
+        display: flex;
+        height: 183px;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+    @media screen and (max-width: 760px) {
+      a {
+        padding: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,191 @@
+.desain {
+  padding: 4rem 2rem;
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 150px 200px 150px;
+    grid-auto-flow: dense;
+    gap: 10px;
+
+    .img-holder {
+      grid-column: span 3;
+      position: relative;
+      overflow: hidden;
+
+      &:nth-child(2) {
+        grid-column: span 6;
+        grid-row: span 2;
+      }
+      &:nth-child(5) {
+        grid-row: span 2;
+      }
+      &:nth-child(6) {
+        grid-column: span 6;
+        grid-row: span 2;
+      }
+      &:nth-child(8) {
+        grid-column: span 6;
+      }
+      p {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        padding: 2rem;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        cursor: none;
+        display: none;
+        @media (hover: none) {
+          display: none;
+        }
+        @media screen and (min-width: 1500px) {
+          display: block;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @media screen and (min-width: 1500px) {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .app__blog-container {
+    display: grid;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+
+    .app__single-blog {
+      &:nth-child(n + 4) {
+        display: none;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+      }
+      &.show {
+        display: block;
+        opacity: 1;
+      }
+      box-shadow: 0 0.125rem 0.25rem rgba(#202020, 0.075);
+      img {
+        width: 100%;
+      }
+      .app__blog-text {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        p {
+          span {
+            font-weight: 700;
+          }
+        }
+        .btn {
+          display: inline-flex;
+          height: 40px;
+          padding: 0 13px;
+          border: 1px solid #3e51b5;
+          align-items: center;
+          border-radius: 3px;
+          font-family: "Asul", sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          letter-spacing: 3px;
+          justify-content: center;
+          text-transform: uppercase;
+          vertical-align: middle;
+          cursor: pointer;
+          transition: all 0.2s;
+          a {
+            text-decoration: none;
+            color: #3e51b5;
+            transition: all 0.2s;
+          }
+          &:hover {
+            background: #3e51b5;
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .toggle__btn {
+      display: inline-flex;
+      grid-column-start: 2;
+      width: 200px;
+      height: 40px;
+      margin: 2rem auto;
+      padding: 0 13px;
+      border: 1px solid #3e51b5;
+      align-items: center;
+      border-radius: 3px;
+      font-family: "Asul", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      letter-spacing: 3px;
+      justify-content: center;
+      text-transform: uppercase;
+      vertical-align: middle;
+      cursor: pointer;
+      transition: all 0.2s;
+      span {
+        text-decoration: none;
+        color: #3e51b5;
+        transition: all 0.2s;
+      }
+      &:hover {
+        background: #3e51b5;
+        span {
+          color: #fff;
+        }
+      }
+    }
+    @media screen and (max-width: 780px) {
+      grid-template-columns: repeat(2, 1fr);
+      .toggle__btn {
+        grid-column-start: 1;
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      grid-template-columns: repeat(1, 1fr);
+      .toggle__btn {
+        grid-column-start: 1;
+        width: 100%;
+      }
+    }
+  }
+  .img-holder {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .app__speakers-item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 2rem;
+    @media screen and (max-width: 1055px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 600px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
